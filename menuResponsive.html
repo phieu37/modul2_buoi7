@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Responsive Menu</title>
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="menuResponsive.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+
+<body>
+  <div id="main">
+    <div id="header">
+      <!-- Logo -->
+      <div class="logo"><a href="#">Logo</a></div>
+
+      <!-- Begin: Nav -->
+      <ul id="nav">
+        <li><i class="fa-solid fa-house icon home"></i><a href="#">Home</a></li>
+        <li class="sub-btn"><i class="fa-brands fa-bandcamp icon band"></i><a href="#band">Band</a><i class="fa-solid fa-angle-down dropdown"></i>
+          <ul class="subnav">
+            <li><a href="#">Merchandise</a></li>
+            <li><a href="#">Extras</a></li>
+            <li><a href="#">Media</a></li>
+          </ul>
+        </li>
+        <li class="sub-btn"><i class="fa-solid fa-tornado icon tour"></i><a href="#tour">Tour</a><i class="fa-solid fa-angle-down dropdown"></i>
+          <ul class="subnav">
+            <li><a href="#">Merchandise</a></li>
+            <li><a href="#">Extras</a></li>
+            <li><a href="#">Media</a></li>
+          </ul>
+        </li>
+        <li class="sub-btn"><i class="fa-solid fa-circle-info icon more"></i><a href="#">More</a><i class="fa-solid fa-angle-down dropdown"></i>
+          <ul class="subnav">
+            <li><a href="#">Merchandise</a></li>
+            <li><a href="#">Extras</a></li>
+            <li><a href="#">Media</a></li>
+          </ul>
+        </li>
+        <li><i class="fa-solid fa-address-card icon about"></i><a href="#contact">About</a></li>
+      </ul>
+      <!-- End: Nav -->
+    </div>
+
+    <i class="menu-toggle-btn fa-solid fa-bars"></i>
+
+    <div class="name"><span>Design by</span>Phạm Đình Hiếu</div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="menuResponsive.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,202 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: url(../img/hinh-nen-phong-canh-1-1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+#header {
+  height: 46px;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+#header .logo a,
+#nav li a {
+  text-decoration: none;
+  color: #fff;
+  line-height: 46px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+#nav .subnav li:not(:last-child) {
+  border-bottom: 1px solid #000;
+}
+
+#nav li:hover {
+  background: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  font-size: 18px;
+}
+
+#nav li {
+  position: relative;
+  padding: 0 24px;
+}
+
+#nav li a {
+  width: 16px;
+  padding: 0 10px;
+}
+
+
+#nav li .dropdown {
+  color: #fff;
+}
+
+#nav li .icon {}
+
+#nav>li:hover .subnav li {
+  font-size: initial;
+}
+
+#nav li:hover .subnav a {
+  color: #000;
+}
+
+#nav .subnav {
+  display: none;
+  min-width: 200px;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+
+#nav li:hover .subnav {
+  display: block;
+}
+
+#header .logo a {
+  background-image: linear-gradient(to right, red, yellow);
+  padding: 15px 48px;
+}
+
+.home {
+  color: orange;
+}
+
+.band {
+  color: blue;
+}
+
+.tour {
+  color: yellow;
+}
+
+.more {
+  color: orchid;
+}
+
+.about {
+  color: red;
+}
+
+#main .menu-toggle-btn {
+  display: none;
+  color: #fff;
+  font-size: 50px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 50px;
+}
+
+#main .name {
+  color: blue;
+  font-size: 50px;
+  position: absolute;
+  top: 50%;
+  right: 50%; 
+  transform: translate(50%,-50%);
+  text-align: center;
+}
+
+#main .name span {
+  display: block;
+}
+
+/* reponsive */
+@media (max-width: 768px) {
+
+  body {
+    background-image: url(../img/anhdoc.jpg);
+  }
+
+  #header.active {
+    height: 100vh;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  #header {
+    display: none;
+  }
+
+  #header .logo,
+  #nav .subnav,
+  #header #nav {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  #nav li .dropdown {
+    position: absolute;
+    right: 0;
+    margin: 12px;
+    transition: 0.3s, ease;
+  }
+
+  #nav .subnav {
+    position: initial;
+    background: none;
+    display: none;
+  }
+
+  #nav .subnav li:not(:last-child) {
+    border-bottom: none;
+  }
+  #nav .subnav li:hover {
+    background: none;
+  }
+  
+  #nav .subnav li:hover a {
+    text-shadow: 2px 2px #FF0000;
+  }
+
+  #nav li:hover .dropdown {
+    transform: rotate(0deg);
+  }
+
+  #main .menu-toggle-btn {
+    display: block;
+  }
+
+  #nav li .dropdown {
+    transform: rotate(-90deg);
+  }
+
+  #main .name {
+    display: none;
+  }
+}
